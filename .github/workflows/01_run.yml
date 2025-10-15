@@ -10,4 +10,5 @@ jobs:
       - name: run script
         run: |
           echo "${{ github.workspace }}"
+          python --version
 #          python ${{ github.workspace }}/hello.py
