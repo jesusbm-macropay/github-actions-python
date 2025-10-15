@@ -11,6 +11,5 @@ jobs:
         run: |
           echo "${{ github.workspace }}"
           python --version
-          pwd
           ls -l
-#          python ${{ github.workspace }}/hello.py
+          python hello.py
