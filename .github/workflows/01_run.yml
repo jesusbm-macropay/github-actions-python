@@ -2,14 +2,22 @@ name: Primera prueba
 run-name: Primera prueba en ejecución
 on: [workflow_dispatch]
 jobs:
+  run-tests:
+    name: running test suite
+    runs-on: ubuntu-latest
+    steps: 
+      - name: run tests
+        run: python -m unittest discover -s tests -p "test_*.py"
+
   execution:
+    name: small execution
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: run script
         run: |
-          echo "${{ github.workspace }}"
+          echo "Directory: ${{ github.workspace }}"
           python --version
           ls -l
           python hello.py

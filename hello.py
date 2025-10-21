@@ -1,5 +1,6 @@
 def greetings():
-    print("hola mundo")
+    """This is my first pyhotn function"""
+    return "hola mundo"
 
 if __name__ == "__main__":
-    greetings()
+    print(greetings())
